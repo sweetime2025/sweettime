@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>甜拾手作</title>
+  <style>
+    :root {
+      --main-brown: #a87c56;
+      --off-white: #fdfaf5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--off-white);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--off-white);
+    }
+
+    header img {
+      max-width: 150px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: var(--main-brown);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--main-brown);
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .carousel {
+      position: relative;
+      width: 90%;
+      max-width: 1200px;
+      height: 100vh;
+      margin: 0 auto; /* 讓區塊水平置中 */
+      overflow: hidden;
+      border-radius: 12px; /* 可選：加圓角讓畫面更溫潤 */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 可選：加陰影讓區塊更跳出來 */
+    }
+
+    .carousel-images {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
+
+    @media (max-width: 768px) {
+      .carousel {
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image/logo.png" alt="甜拾 Logo">
+    <div class="tagline">純手做的甜，拾回最真的感動</div>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="menu.html">Menu</a>
+  </nav>
+
+  <div class="carousel">
+    <button class="arrow left" onclick="prevSlide()">‹</button>
+    <div class="carousel-images" id="carouselImages">
+      <img src="image/basi.png" alt="甜點1">
+      <img src="image/grape.png" alt="甜點2">
+      <img src="image/lemontila.png" alt="甜點3">
+    </div>
+    <button class="arrow right" onclick="nextSlide()">›</button>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const imagesContainer = document.getElementById("carouselImages");
+    const slides = imagesContainer.querySelectorAll("img");
+    const totalSlides = slides.length;
+  
+    function showSlide(index) {
+      const carousel = document.querySelector(".carousel");
+      const width = carousel.clientWidth;
+      imagesContainer.style.transform = `translateX(-${index * width}px)`;
+    }
+  
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+  
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+  
+    // 自動輪播（每6秒換一張）
+    setInterval(nextSlide, 6000);
+  
+    // 初始顯示第一張
+    window.addEventListener("load", () => {
+      showSlide(currentIndex);
+    });
+  
+    // 補強：視窗大小改變時更新位置（防止 resize 時圖片跑掉）
+    window.addEventListener("resize", () => {
+      showSlide(currentIndex);
+    });
+  </script>
+  
+  <footer style="background-color: #a87c56; color: #fdfaf5; text-align: center; padding: 0.3rem; font-size: 0.9rem;">
+    <p>© 2025 甜拾手作 Tianshi Handmade. 保留所有權利。</p>
+    <p>本網站為練習作品，非實際商業用途。</p>
+  </footer>
+  
+</body>
+</html>
