@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我們｜甜拾手作</title>
+  <style>
+    :root {
+      --main-brown: #a87c56;
+      --off-white: #fdfaf5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--off-white);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--off-white);
+    }
+
+    header img {
+      max-width: 150px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: var(--main-brown);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--main-brown);
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .about-section {
+      padding: 4rem 1rem;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-text h2 {
+      color: var(--main-brown);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      line-height: 1.8;
+      color: #555;
+    }
+
+    footer {
+      background-color: var(--main-brown);
+      color: var(--off-white);
+      text-align: center;
+      padding: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="image/logo.png" alt="甜拾 Logo">
+    <div class="tagline">純手做的甜，拾回最真的感動</div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="menu.html">Menu</a>
+  </nav>
+
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-image">
+        <img src="image/about.jpg" alt="關於我們圖片">
+      </div>
+      <div class="about-text">
+        <h2>甜拾手作的故事</h2>
+        <p>
+          「甜拾」代表我們對甜點的初心與用心。<br>
+          每一塊蛋糕、每一口甜點，都是用純手工與心意烘焙而成，<br>
+          希望帶給你一份拾回真實感動的甜蜜滋味。<br>
+          我們堅持使用新鮮食材、不添加防腐劑，讓你吃得安心、感受到家的溫度。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 甜拾手作 Tianshi Handmade. 保留所有權利。</p>
+    <p>本網站為練習作品，非實際商業用途。</p>
+  </footer>
+
+</body>
+</html>

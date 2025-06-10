@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>甜拾手作｜Menu</title>
+  <style>
+    :root {
+      --main-brown: #a87c56;
+      --off-white: #fdfaf5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--off-white);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--off-white);
+    }
+
+    header img {
+      max-width: 150px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: var(--main-brown);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--main-brown);
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: var(--main-brown);
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .slider-container {
+      position: relative;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 1rem;
+      border-radius: 10px;
+    }
+
+    .slider-container img {
+      scroll-snap-align: center;
+      width: 100%;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 0.5rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .product-desc {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .product-price {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: var(--main-brown);
+    }
+
+    footer {
+      background-color: var(--main-brown);
+      color: var(--off-white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image/logo.png" alt="甜拾 Logo">
+    <div class="tagline">純手做的甜，拾回最真的感動</div>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="menu.html">Menu</a>
+  </nav>
+
+  <div class="section">
+    <h2>巴斯克乳酪蛋糕</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/basi.png" alt="經典原味">
+          <img src="image/原味.png" alt="經典原味2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">經典原味</div>
+        <div class="product-desc">濃郁奶香與法國奶油的完美組合，口感柔軟，令人回味無窮。</div>
+        <div class="product-price">4吋 $180 / 6吋 $460</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/焙茶切.png" alt="日式焙茶">
+          <img src="image/焙茶2.jpg" alt="日式焙茶2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">日式焙茶</div>
+        <div class="product-desc">焙茶特有烘焙香氣與巴斯克滑順口感交織，溫潤不甜膩，茶控最愛！
+        </div>
+        <div class="product-price">4吋 $190 / 6吋 $490</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/黑巧1.png" alt="黑巧可可">
+          <img src="image/黑巧2.jpg" alt="黑巧可可2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">黑巧可可</div>
+        <div class="product-desc">選用65%黑巧克力，濃厚可可滋味，甜中帶點微苦不死甜。</div>
+        <div class="product-price">4吋 $200 / 6吋 $550</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/藍莓2.jpg" alt="山丘藍莓">
+          <img src="image/blueberry2.png" alt="山丘藍莓2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">山丘藍莓</div>
+        <div class="product-desc">自製藍莓果醬，酸甜果粒與乳酪完美融合，口感層次豐富。</div>
+        <div class="product-price">4吋 $290 / 6吋 $690</div>
+      </div>
+      
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/抹茶切.png" alt="靜岡抹茶">
+          <img src="image/抹茶整.png" alt="靜岡抹茶2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">靜岡抹茶</div>
+        <div class="product-desc">選用日本靜岡抹茶粉，茶香濃厚回甘，與乳酪香氣完美融合。
+        </div>
+        <div class="product-price">4吋 $200 / 6吋 $510</div>
+      </div>
+      <!-- 其他巴斯克口味同樣格式複製填入圖片與資訊 -->
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>提拉米蘇</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/tila (2).png" alt="原味可可">
+          <img src="image/原提.jpg" alt="原味可可2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">原味可可</div>
+        <div class="product-desc">濃郁馬斯卡彭搭配香醇可可粉，經典不敗的義式風味。</div>
+        <div class="product-price">$110</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/oreo.png" alt="海鹽OREO">
+          <img src="image/oreo.png" alt="海鹽OREO2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">海鹽OREO</div>
+        <div class="product-desc">酥脆Oreo餅乾與綿密奶油層層交疊，鹹甜平衡超療癒！</div>
+        <div class="product-price">$120</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/lemontila.png" alt="清新檸檬">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">清新檸檬</div>
+        <div class="product-desc">加入自製檸檬醬，酸香爽口，讓整體口感更輕盈不膩，一口接一口超順口！</div>
+        <div class="product-price">$125</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/芒果.jpg" alt="夏日芒芒">
+          <img src="image/芒果2.jpg" alt="夏日芒芒2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">夏日芒芒</div>
+        <div class="product-desc">使用新鮮芒果製成果泥醬，酸甜清爽，每口都是夏天的味道。</div>
+        <div class="product-price">$150</div>
+      </div>
+      <!-- 其他提拉米蘇口味同樣格式複製填入 -->
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>生乳酪蛋糕</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/lemon.png" alt="初夏檸檬">
+          <img src="image/lemon2.jpg" alt="初夏檸檬2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">初夏檸檬</div>
+        <div class="product-desc">加入新鮮檸檬汁製作，酸甜爽口，夏天必吃甜點。</div>
+        <div class="product-price">2吋 $130 / 6吋 $420</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/grape.png" alt="輕香白葡">
+          <img src="image/grape2.jpg" alt="輕香白葡2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">輕香白葡</div>
+        <div class="product-desc">白葡萄果香清甜、口感脆嫩，與濃郁乳酪完美融合，每一口都清爽療癒。</div>
+        <div class="product-price">2吋 $190 / 6吋 $630</div>
+      </div>
+      <div class="product-card">
+        <div class="slider-container">
+          <img src="image/蓮花餅1.jpg" alt="蓮花餅">
+          <img src="image/蓮花餅2.jpg" alt="蓮花餅2">
+        </div>
+        <div class="dots"><div class="dot"></div><div class="dot"></div></div>
+        <div class="product-title">輕香白葡</div>
+        <div class="product-desc">白葡萄果香清甜、口感脆嫩，與濃郁乳酪完美融合，每一口都清爽療癒。</div>
+        <div class="product-price">2吋 $190 / 6吋 $630</div>
+      </div>
+      <!-- 其他生乳酪口味同樣格式複製填入 -->
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 甜拾手作 Tianshi Handmade. 保留所有權利。</p>
+    <p>本網站為練習作品，非實際商業用途。</p>
+  </footer>
+</body>
+</html>
